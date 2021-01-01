@@ -1,10 +1,5 @@
 package ru.pdl;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
-
 /**
  * Given an n x n array, return the array elements arranged from outermost elements to the middle element, traveling clockwise.
  */
@@ -46,18 +41,12 @@ public class SnailSort {
   }
 
   public static class Cursor {
-    public Integer x, y, minX, minY = 0;
-    public Integer maxX, maxY;
-    public DIRECTION direction;
+    public int x, y, minX, minY, maxX, maxY;
+    public DIRECTION direction = DIRECTION.RIGHT;
 
     public Cursor(final int maxXY) {
       this.maxX = maxXY;
       this.maxY = maxXY;
-      this.minX = 0;
-      this.minY = 0;
-      this.y = 0;
-      this.x = 0;
-      this.direction = DIRECTION.RIGHT;
     }
 
     public void move() {
