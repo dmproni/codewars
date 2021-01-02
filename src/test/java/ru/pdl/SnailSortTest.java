@@ -60,8 +60,8 @@ class SnailSortTest {
   }
 
   @Test
-  void givenDifferentSize_ShouldRaiseUnsupportedException() {
-    Assertions.assertThrows(UnsupportedOperationException.class, () -> SnailSort.snail(new int[1][0]));
+  void givenEmpty_ShouldReturnEmpty() {
+    Assertions.assertArrayEquals(new int[0], SnailSort.snail(new int[1][0]));
   }
 
   @Test

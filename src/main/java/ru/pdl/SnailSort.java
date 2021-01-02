@@ -11,11 +11,8 @@ public class SnailSort {
     }
     for (int[] ints : array) {
       if (ints.length != array.length) {
-        throw new UnsupportedOperationException();
+        return new int[0];
       }
-    }
-    if (array.length == 1) {
-      return array[0];
     }
 
     final Cursor cursor = new Cursor(array.length - 1);
@@ -30,19 +27,19 @@ public class SnailSort {
     return result;
   }
 
-  private static DIRECTION switchDirection(final DIRECTION direction) {
-    var inputIndex = direction.ordinal();
-    var indexOfNextDirection = inputIndex == DIRECTION.values().length - 1 ? 0 : inputIndex + 1;
-    return DIRECTION.values()[indexOfNextDirection];
-  }
-
-  private enum DIRECTION {
-    RIGHT, DOWN, LEFT, UP
-  }
-
   public static class Cursor {
     public int x, y, minX, minY, maxX, maxY;
     public DIRECTION direction = DIRECTION.RIGHT;
+
+    private enum DIRECTION {
+      RIGHT, DOWN, LEFT, UP
+    }
+
+    private void switchDirection() {
+      var inputIndex = direction.ordinal();
+      var indexOfNextDirection = inputIndex == DIRECTION.values().length - 1 ? 0 : inputIndex + 1;
+      direction = DIRECTION.values()[indexOfNextDirection];
+    }
 
     public Cursor(final int maxXY) {
       this.maxX = maxXY;
@@ -56,7 +53,7 @@ public class SnailSort {
         } else {
           minY++;
           y++;
-          direction = SnailSort.switchDirection(direction);
+          switchDirection();
         }
       } else if (direction == DIRECTION.DOWN) {
         if (y < maxY) {
@@ -64,7 +61,7 @@ public class SnailSort {
         } else {
           maxX--;
           x--;
-          direction = SnailSort.switchDirection(direction);
+          switchDirection();
         }
       } else if (direction == DIRECTION.LEFT) {
         if (x > minX) {
@@ -72,7 +69,7 @@ public class SnailSort {
         } else {
           maxY--;
           y--;
-          direction = SnailSort.switchDirection(direction);
+          switchDirection();
         }
       } else if (direction == DIRECTION.UP) {
         if (y > minY) {
@@ -80,7 +77,7 @@ public class SnailSort {
         } else {
           minX++;
           x++;
-          direction = SnailSort.switchDirection(direction);
+          switchDirection();
         }
       }
     }
