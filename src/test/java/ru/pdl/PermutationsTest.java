@@ -2,7 +2,6 @@ package ru.pdl;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -31,6 +30,12 @@ class PermutationsTest {
   void givenStringWithTwoLetters_ShouldReturnCorrectResult() {
     MatcherAssert.assertThat(Permutations.singlePermutations("ab"),
       Matchers.containsInAnyOrder(Arrays.asList("ab", "ba").toArray()));
+  }
+
+  @Test
+  void givenStringWithThreeLetters_ShouldReturnCorrectResult() {
+    MatcherAssert.assertThat(Permutations.singlePermutations("abc"),
+      Matchers.containsInAnyOrder(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba").toArray()));
   }
 
   @Test
