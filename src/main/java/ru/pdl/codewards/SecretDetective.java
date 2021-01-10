@@ -1,4 +1,4 @@
-package ru.pdl;
+package ru.pdl.codewards;
 
 import java.util.ArrayList;
 import java.util.HashSet;

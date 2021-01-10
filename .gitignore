@@ -10,13 +10,13 @@
 /build/tmp/compileJava/source-classes-mapping.txt
 /build/tmp/compileTestJava/source-classes-mapping.txt
 /build/reports/tests/test/css/style.css
-/build/test-results/test/TEST-ru.pdl.SnailSortTest.xml
+/build/test-results/test/TEST-SnailSortTest.xml
 /.idea/misc.xml
 /.idea/modules.xml
 /build/test-results/test/binary/output.bin.idx
 /build/reports/tests/test/js/report.js
 /build/reports/tests/test/packages/ru.pdl.html
-/build/reports/tests/test/classes/ru.pdl.SnailSortTest.html
+/build/reports/tests/test/classes/SnailSortTest.html
 /settings.gradle
 /build/reports/tests/test/index.html
 /.idea/jarRepositories.xml

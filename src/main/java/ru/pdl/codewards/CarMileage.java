@@ -1,4 +1,4 @@
-package ru.pdl;
+package ru.pdl.codewards;
 
 public class CarMileage {
   public final static int LEAST_INTERESTING_NUMBER = 100;

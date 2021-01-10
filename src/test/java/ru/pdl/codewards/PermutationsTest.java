@@ -1,4 +1,4 @@
-package ru.pdl;
+package ru.pdl.codewards;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;

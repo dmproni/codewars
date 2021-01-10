@@ -1,12 +1,11 @@
-package ru.pdl;
+package ru.pdl.codewards;
 
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static ru.pdl.SimplePigLatin.pigIt;
+import static ru.pdl.codewards.SimplePigLatin.pigIt;
 
 class SimplePigLatinTest {
 

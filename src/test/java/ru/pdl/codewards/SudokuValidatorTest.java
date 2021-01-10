@@ -1,4 +1,4 @@
-package ru.pdl;
+package ru.pdl.codewards;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package ru.pdl;
+package ru.pdl.codewards;
 
 public class TimeFormatter {
   public static final int NUM_OF_SECONDS_IN_ONE_MINUTE = 60;
