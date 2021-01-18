@@ -2,7 +2,7 @@ package ru.pdl;
 
 import java.util.Arrays;
 
-public class Tests {
+public class TinkoffTask1 {
   public static void main(String[] args) {
 //    final var arr = new int[]{31, 41, 59, 26, 41, 58};
     final var arr = new int[]{1, 2, 10, 20, 15, 16, 5, 8, 100, 200, 999, 560};
