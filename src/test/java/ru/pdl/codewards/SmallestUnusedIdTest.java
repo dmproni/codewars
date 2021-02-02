@@ -13,6 +13,10 @@ class SmallestUnusedIdTest {
   @Test
   public void fixedTests() {
     assertEquals(0, nextId(new int[]{}));
+    assertEquals(0, nextId(new int[]{1, 2, 3, 5}));
+    assertEquals(0, nextId(new int[]{1, 3, 5}));
+    assertEquals(0, nextId(new int[]{4, 5, 7}));
+    assertEquals(4, nextId(new int[]{0, 1, 5, 3, 2}));
     assertEquals(4, nextId(new int[]{0, 1, 2, 3, 5}));
     assertEquals(4, nextId(new int[]{1, 2, 0, 2, 3}));
     assertEquals(4, nextId(new int[]{1, 2, 0, 2, 3, 5}));

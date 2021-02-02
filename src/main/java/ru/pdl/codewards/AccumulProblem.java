@@ -1,5 +1,8 @@
 package ru.pdl.codewards;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AccumulProblem {
 
   public static String accum(String s) {
@@ -15,6 +18,10 @@ public class AccumulProblem {
     }
 
     return result.toString();
+  }
+
+  public static void main(String[] args) {
+    List<String> items = new ArrayList<>();
   }
 
 }

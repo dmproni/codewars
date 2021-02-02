@@ -4,21 +4,25 @@ import java.util.Arrays;
 
 public class SmallestUnusedId {
   public static int nextId(int[] ids) {
-    Arrays.sort(ids);
+    int smallest = Integer.MAX_VALUE;
 
-    if (ids.length == 0 || ids[0] != 0) {
+    for (int i = 0; i < ids.length; i++) {
+      if (ids[i] < smallest) {
+        smallest = ids[i];
+      }
+    }
+
+    if (smallest > 0) {
       return 0;
     }
+    return 0;
+  }
 
-    int index = 0;
-    while (index + 1 < ids.length) {
-      if (ids[index + 1] - ids[index] > 1) {
-        return ids[index] + 1;
-      }
-      index++;
-    }
-
-    return ids[ids.length - 1] + 1;
+  public static void main(String[] args) {
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    var r = new int[]{a, b, c};
   }
 
 }
